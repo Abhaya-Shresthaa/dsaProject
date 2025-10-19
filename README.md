@@ -1,129 +1,123 @@
-AVL Tree Visualization - README
+# 🌳 AVL Tree Visualizer
 
-Overview
+An interactive **AVL Tree visualizer** built using **HTML, CSS, JavaScript, and D3.js**.  
+It demonstrates how AVL Trees (self-balancing Binary Search Trees) perform **insertions**, **deletions**, and **rotations** to maintain balance — with smooth animations and real-time height/balance updates.
 
-An interactive web-based visualization tool for AVL Trees (self-balancing Binary Search Trees) that demonstrates insertion, deletion, and balancing operations with smooth animations.
+🎮 **Live Demo:** [https://abhaya-shresthaa.github.io/dsaProject](https://abhaya-shresthaa.github.io/dsaProject)
 
-Features
+---
 
-Core Functionality
+## 📖 Overview
 
-Insert Operations: Add nodes with automatic balancing
-Delete Operations: Remove nodes with rebalancing
-Real-time Visualization: Animated tree operations
-Balance Tracking: Display height and balance factor for each node
-Step Navigation: Move forward/backward through operation history
-In-order Traversal: Display sorted values
-Visual Features
+This project helps students and learners **visualize AVL Tree operations interactively**.  
+You can insert or delete nodes, see balance factors, rotations (LL, RR, LR, RL), and control animation speed.
 
-Smooth Animations: Node movements and rotations
-Color-coded States:
+## 🚀 Features
 
-Red glow: Currently visited nodes
-Yellow glow: Rotation pivot points
-Orange: New nodes being inserted
-Red: Unbalanced nodes
-Arc-based Rotations: Circular motion during tree rotations
-Floating Node Effects: Visual tracking of node movements
-Interactive Controls
+- **Insert & Delete Nodes** — with smooth, step-by-step animations
+- **Automatic Balancing** — shows LL, RR, LR, and RL rotations visually
+- **Displays Node Heights & Balance Factors** beside each node
+- **Traversal Path Highlighting** during operations
+- **Adjustable Animation Speed** (1x–4x)
+- **Timeline Navigation** — step forward or backward through tree states
+- **In-Order Traversal Print** — displays sorted node values
+- **Responsive & Minimal UI** built for clarity
 
-Speed Control: 1x, 2x, 3x, 4x animation speeds
-Step Navigation: Browse through operation history
-Real-time Input: Direct value insertion/deletion
-Technical Implementation
+---
 
-Architecture
+## 🧠 Technologies Used
 
-Frontend: Pure HTML, CSS, JavaScript with D3.js for visualization
-Tree Logic: Custom AVL tree implementation with rotation handling
-Animation System: Queue-based animation system with speed control
-State Management: Snapshot system for undo/redo functionality
-Key Components
+| Purpose | Technology |
+|---------|------------|
+| Structure | HTML5 |
+| Styling | CSS3 |
+| Logic | JavaScript (ES6) |
+| Visualization | [D3.js v7](https://d3js.org) |
 
-AVL Tree Class
+---
 
-Complete AVL tree implementation with:
+## 🛠️ Installation & Setup
 
-Insertion with automatic balancing
-Deletion with rebalancing
-Height and balance factor calculations
-Four rotation cases (LL, LR, RR, RL)
-Visualization Engine
+### ▶️ Option 1 — View Online
+Simply open the **[Live Demo](https://abhaya-shresthaa.github.io/dsaProject)** in your browser.
 
-D3.js Integration: SVG-based tree rendering
-Dynamic Layout: Automatic tree positioning and spacing
-Animation Pipeline: Smooth transitions between states
-Collision Detection: Proper node placement without overlaps
-Animation System
+### 💻 Option 2 — Run Locally
 
-Queue-based Execution: Sequential animation processing
-Speed Modulation: Adjustable animation durations
-State Transitions: Smooth node movements and rotations
-Visual Feedback: Highlighting and color changes
-Usage Instructions
+1. **Clone or Download the repository:**
+   ```bash
+   git clone https://github.com/abhaya-shresthaa/dsaProject.git
+   cd dsaProject
 
-Basic Operations
 
-Insert Node:
 
-Enter a numeric value in the "Value to insert" field
+## Open in browser:
+
+bash
+    For most systems:
+    open index.html
+
+Or use a local server:
+    python -m http.server 8000
+    Then visit http://localhost:8000
+
+## 🎮 How to Use
+
+**Insert Nodes:**
+
+Enter a value in the "Insert Value" box
 Click "Insert" button
-Watch the traversal and automatic balancing
-Delete Node:
+Watch the animation as the tree inserts and automatically balances
 
-Enter a numeric value in the "Value to delete" field
+**Delete Nodes:**
+
+Enter a value in the "Delete Value" box
 Click "Delete" button
 Observe deletion and rebalancing process
-Navigation:
 
-Use ⏪ Step Back and ⏩ Step Forward to browse history
-Click "Print In-Order" to see sorted values
-Animation Controls
+**Navigation Controls:**
 
-Speed Buttons: Adjust animation speed (1x-4x)
-Real-time Updates: Visual feedback during operations
-Status Display: Current operation description
-Technical Details
+⏪ Step Back / ⏩ Step Forward — navigate through previous tree states
+Speed: 1x / 2x / 3x / 4x — adjust animation playback speed
+Print In-Order — view sorted node values of the current tree
 
-Tree Properties Displayed
-
-Value: Node's numeric value
-Height: Height of the subtree
-Balance: Balance factor (left height - right height)
-Balancing Operations
-
-The visualizer demonstrates all four AVL rotation cases:
-
-Left-Left (LL): Single right rotation
-Left-Right (LR): Left then right rotation
-Right-Right (RR): Single left rotation
-Right-Left (RL): Right then left rotation
-Performance Features
-
-Efficient tree operations (O(log n) for insert/delete)
-Optimized animations with minimal DOM operations
-Memory-efficient snapshot system
-Browser Compatibility
-
-Modern browsers with ES6+ support
-Chrome, Firefox, Safari, Edge
-Mobile-responsive design
-Project Structure
+## ⚙️ Project Structure
 
 text
-avl-tree-visualizer/
-├── index.html          # Main HTML structure
-├── style.css           # Styling and responsive design
-└── visualizer.js       # Core AVL logic and visualization
-Demo
+📦 dsaProject
+├── index.html        # Main UI and layout
+├── style.css         # Styling for buttons, layout, and colors
+└── visualizer.js     # Core AVL tree logic + D3.js animations
 
-Live demo available at: https://abhaya-shresthaa.github.io/dsaProject/
+## 🔍 How It Works
 
-Educational Value
+## 🌿 AVL Tree Logic (visualizer.js)
 
-This tool is ideal for:
+- Implements standard AVL tree insertion and deletion algorithms in pure JavaScript
+- Maintains height and balance factor for every node
+- Performs the required LL, RR, LR, and RL rotations automatically after each operation
+- After every change, recalculates node positions and updates the visualization
 
-Computer science students learning data structures
-Understanding AVL tree operations and balancing
-Visualizing algorithm complexity and efficiency
-Demonstrating self-balancing binary search trees
+## 🎨 Visualization (D3.js)
+
+Uses D3.js to dynamically draw an SVG tree diagram
+Each node is represented as a circle with the value and balance info
+Links (edges) are drawn using D3 line elements
+Animations occur during insertion, deletion, and rotations
+Smooth transitions highlight rebalancing visually, showing subtree rotations clearly
+
+## 📈 Example Operations
+
+Operation	Description
+Insert 10 → 20 → 30	Triggers Right-Right (RR) rotation
+Insert 30 → 20 → 10	Triggers Left-Left (LL) rotation
+Insert 10 → 30 → 20	Triggers Right-Left (RL) rotation
+Insert 30 → 10 → 20	Triggers Left-Right (LR) rotation
+
+## 👤 Author
+
+Abhaya Shresthaa
+📎 GitHub: @abhaya-shresthaa
+🌐 Live Demo: AVL Tree Visualizer
+
+**✨ Thank you for exploring the AVL Tree Visualizer! ✨**
+**Built using HTML, CSS, JavaScript, and D3.js.**
