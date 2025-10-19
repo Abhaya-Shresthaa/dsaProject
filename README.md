@@ -109,5 +109,7 @@ Simply open the **[Live Demo](https://abhaya-shresthaa.github.io/dsaProject)** i
 📎 GitHub: [@abhaya-shresthaa](https://github.com/abhaya-shresthaa)  
 🌐 Live Demo: [AVL Tree Visualizer](your-live-demo-link-here)
 
+---  
+
 **✨ Thank you for exploring the AVL Tree Visualizer! ✨**  
 **✨Built using HTML, CSS, JavaScript, and D3.js✨**
