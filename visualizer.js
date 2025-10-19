@@ -103,7 +103,7 @@ class AVLTree {
     } else if (value > node.value) {
       node.right = this._insert(node.right, value, path);
     } else {
-      return node; // Duplicate values not allowed
+      return node; 
     }
     
     // Update height and balance factor
@@ -199,7 +199,7 @@ class AVLTree {
     const x = y.left;
     const T2 = x.right;
 
-    // Perform rotation
+   
     x.right = y;
     y.left = T2;
 
