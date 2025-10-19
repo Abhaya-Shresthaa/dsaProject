@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AVL Tree Visualizer — Smooth Rotations</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <h1>AVL Tree Visualizer</h1>
+
+  <div class="controls">
+    <input id="insertValue" type="number" placeholder="Value to insert">
+    <button id="insertBtn">Insert</button>
+
+    <input id="deleteValue" type="number" placeholder="Value to delete">
+    <button id="deleteBtn">Delete</button>
+
+    <button id="stepBack">⏪ Step Back</button>
+    <button id="stepFwd">⏩ Step Forward</button>
+    <button id="printBtn">Print In-Order</button>
+
+    <div class="speed-controls">
+        <span><b>Speed:</b></span>
+        <button id="speed1x" class="speed-btn active">1x</button>
+        <button id="speed2x" class="speed-btn">2x</button>
+        <button id="speed3x" class="speed-btn">3x</button>
+        <button id="speed4x" class="speed-btn">4x</button>
+    </div>
+  </div>
+
+  <svg id="tree" width="1000" height="520"></svg>
+  <div id="steps">Ready.</div>
+  <div id="printOutput"></div>
+
+  <script src="visualizer.js"></script>
+</body>
+</html>
